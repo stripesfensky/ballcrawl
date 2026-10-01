@@ -4,6 +4,9 @@ backend:
   name: github
   repo: stripesfensky/ballcrawl
 
+media_folder: /public/media
+public_folder: /media
+
 collections:
   - name: content
     folder: content
