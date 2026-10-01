@@ -1,4 +1,4 @@
 ---
-title: "Testing"
+title: Testing
 ---
 Don't mind me.
