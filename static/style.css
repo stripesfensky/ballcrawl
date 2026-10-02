@@ -120,6 +120,7 @@ footer {
   height: calc(var(--base-font-size) * 2.2);
   margin-top: calc(var(--base-font-size) * 0.4);
   padding: 0;
+  transition: background-color 0.2s;
   width: calc(var(--base-font-size) * 2.2);
   -webkit-tap-highlight-color: transparent; 
 }
@@ -127,10 +128,6 @@ footer {
 .button:active {
   cursor: pointer;
   background-color: var(--randomB);
-}
-
-.button:hover {
-  transition: background-color 0.2s;
 }
 
 footer .brandmark {
