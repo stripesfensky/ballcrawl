@@ -51,10 +51,6 @@ p {
   margin-bottom: var(--base-font-size);
 }
 
-html {
-  visibility: hidden;
-}
-
 body {
   background-color: var(--main-background);
   color: var(--main-color);
