@@ -208,21 +208,6 @@ nav {
   color: var(--main-color);
 }
 
-#nav-settings {
-  font-size: calc(var(--base-font-size) * 0.75);
-  gap: calc(var(--base-font-size) * 0.5);
-  min-width: 100%;
-}
-
-#nav-profile, #nav-logout, #nav-profile:hover, #nav-logout:hover {
-  color: var(--main-color);
-  text-decoration: none;
-}
-
-#nav-user-info {
-  flex: 1;
-}
-
 .nav-hidden {
   display: none;
 }
