@@ -11,15 +11,15 @@ window.addEventListener("load", () => {
 
   root.style.visibility = "visible";
 
-  const search = document.querySelector("#header-search");
-  const toggle = document.querySelector("#header-darklight-toggle");
+  const searchToggle = document.querySelector("#header-search-toggle");
+  const themeToggle = document.querySelector("#header-theme-toggle");
 
-  if (search) {
-    search.addEventListener("click", toggleNavSearch);
+  if (searchToggle) {
+    searchToggle.addEventListener("click", setSearch);
   }
 
-  if (toggle) {
-    toggle.addEventListener("click", () => {
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
       const currentTheme = localStorage.getItem("theme");
       const newTheme = currentTheme === "light" ? "dark" : "light";
       setTheme(newTheme);
@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
 
 function setTheme(newTheme) {
   const styles = getComputedStyle(root);
-  const properties = ["header-bg", "nav-bg", "nav-btn", "main-bg", "main-color"];
+  const properties = ["header-background", "nav-background", "nav-button", "main-background", "main-color"];
 
   properties.forEach(property => {
     const value = styles.getPropertyValue(`--${newTheme}-${property}`);
@@ -41,7 +41,7 @@ function setTheme(newTheme) {
   localStorage.setItem("theme", newTheme);
 }
 
-function toggleNavSearch() {
+function setSearch() {
   const nav = document.querySelector("nav");
   const nav_search = document.querySelector("#nav-search");
   const nav_search_bar = document.querySelector("#nav-search-bar");
