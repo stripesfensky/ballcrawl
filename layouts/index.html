@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Ball Crawl | Community Database for PTT, SPP, and CEC</title>
+    <title>{{ site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="logo.svg" type="image/svg+xml">
     <script src="ballcrawl.js"></script>
   </head>
   <body>
-    <header class="brd">
-      <div id="header" class="mw pd flx">
+    <header class="brand-border">
+      <div id="header" class="marginwidth padding flex">
         <div id="header-logo">
           <object id="header-logo-brandmark" class="logo-brandmark" type="image/svg+xml" data="logo.svg"></object>
           <h1 id="header-logo-wordmark">
-            <span id="header-logo-wordmark-rg">the ball crawl</span>
-            <span id="header-logo-wordmark-sm">tbc</span>
+            <span id="header-logo-wordmark-regular">the ball crawl</span>
+            <span id="header-logo-wordmark-small">tbc</span>
           </h1>
         </div>
-        <div id="header-search">
-          <div class="header-button btn flx" title="Search">
+        <div id="header-search-toggle">
+          <div class="header-button button flex" title="Toggle search menu">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
-        <div id="header-darklight-toggle">
-          <div class="header-button btn flx" title="Toggle Dark/Light">
+        <div id="header-theme-toggle">
+          <div class="header-button button flex" title="Toggle theme">
             <i class="fa-solid fa-moon"></i>
           </div>
         </div>
       </div>
     </header>
     <nav class="nav-section-hidden">
-      <div id="nav" class="mw pd flx">
+      <div id="nav" class="marginwidth padding flex">
         <div id="nav-search" class="nav-hidden">
           <i class="fa-solid fa-magnifying-glass i-mg"></i>
           <label for="nav-search-bar" hidden>Search</label>
@@ -38,14 +38,14 @@
         </div>
       </div>
     </nav>
-    <main class="flx">
-      <div id="main" class="mw pd">
+    <main>
+      <div id="main" class="marginwidth padding">
         <h1>{{ .Title }}</h1>
         {{ .Content }}
       </div>
     </main>
-    <footer class="brd">
-      <div id="footer" class="mw pd flx">
+    <footer class="brand-border">
+      <div id="footer" class="marginwidth padding flex">
         <div id="footer-disclaimer">
           <p>
             User-generated text content is available under the 
