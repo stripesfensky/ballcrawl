@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    {{ $style := resources.Get "style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <link rel="icon" href="logo.svg" type="image/svg+xml">
-    <script src="ballcrawl.js" defer></script>
+    {{ $js := resources.Get "ballcrawl.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
   </head>
   <body>
     <header class="border container flex">
