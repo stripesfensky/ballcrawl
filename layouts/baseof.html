@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     {{ $style := resources.Get "style.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    {{ $logo := resources.Get "logo.svg" | minify | fingerprint }}
+    <link rel="icon" href="{{ $logo.RelPermalink }}" type="image/svg+xml">
     {{ $js := resources.Get "ballcrawl.js" | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" defer></script>
   </head>
   <body class="preload">
-    {{ partial "header.html" }}
+    {{ partial "header.html" $logo }}
     <main class="container">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "footer.html" }}
+    {{ partial "footer.html" $logo }}
   </body>
 </html>
