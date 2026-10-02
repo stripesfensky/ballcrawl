@@ -129,6 +129,12 @@ footer {
   -webkit-tap-highlight-color: transparent; 
 }
 
+.button-main {
+  font-size: calc(var(--base-font-size) * 0.7);
+  height: calc(var(--base-font-size) * 1.6) !important;
+  width: calc(var(--base-font-size) * 1.6) !important;
+}
+
 .button:active {
   cursor: pointer;
   background-color: var(--randomB);
@@ -142,6 +148,10 @@ footer {
   .button:hover {
     cursor: pointer;
     background-color: var(--randomB);
+  }
+
+  .button-main:hover {
+    background-color: var(--randomC) !important;
   }
 }
 
@@ -166,6 +176,19 @@ footer .brandmark {
   display: none;
 }
 
+#pageinfo {
+  display: flex;
+  gap: calc(var(--base-font-size) * 0.8);
+}
+
+#pageinfo-title {
+  margin-bottom: calc(var(--base-font-size) * 0.2);
+}
+
+#pageinfo-updated {
+  font-size: calc(var(--base-font-size) * 0.8);
+}
+
 #disclaimer {
   flex: 1;
   font-size: calc(var(--base-font-size) * 0.8);
@@ -183,7 +206,7 @@ footer .brandmark {
 
 #disclaimer li:not(:last-child)::after {
   content: "|";
-  margin: 0 calc(var(--base-font-size) * 0.2);
+  margin: 0 calc(var(--base-font-size) * 0.4);
 }
 
 @media (hover: hover) {
