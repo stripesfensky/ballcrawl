@@ -1,3 +1,8 @@
 baseURL: https://www.ballcrawl.org
 locale: en-us
 title: The Ball Crawl | Community Database for PTT, SPP, and CEC
+
+enableGitInfo: true
+
+frontmatter:
+  lastmod: [':git', ':fileModTime', ':default']
