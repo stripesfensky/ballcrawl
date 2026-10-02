@@ -3,6 +3,8 @@ const currentTheme = localStorage.getItem("theme") || "dark";
 
 root.setAttribute("data-theme", currentTheme);
 root.style.visibility = "visible";
+
+document.addEventListener("touchstart", function() {}, true);
   
 window.addEventListener("DOMContentLoaded", () => {
   generateColors();
@@ -10,6 +12,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector("#theme-toggle");
 
   updateToggleIcon(currentTheme)
+
+  requestAnimationFrame(() => {
+    document.body.classList.remove("preload");
+  });
 
   toggleButton?.addEventListener("click", () => {
     const activeTheme = root.getAttribute("data-theme");
