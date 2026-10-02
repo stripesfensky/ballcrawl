@@ -1,4 +1,10 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <div id="pageinfo">
+    <h1 id="pageinfo-title">{{ .Title }}</h1>
+    <button id="theme-toggle" class="button button-main flex" title="Show last updated" type="button" aria-label="Show last updated">
+      <i class="fa-regular fa-clock"></i>
+    </button>
+  </div>
+  <span id="pageinfo-updated">Page last updated on {{ .Lastmod.Format "January 2, 2006 at 3:04pm MST" }}</span>
   <p>{{ $.Content }}</p>
 {{ end }}
