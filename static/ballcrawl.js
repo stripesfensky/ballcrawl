@@ -1,9 +1,9 @@
-const root = document.documentElement;
-
 document.addEventListener("touchstart", () => {}, true);
 
-let theme = localStorage.getItem("theme") || "dark";
-setTheme(theme);
+const root = document.documentElement;
+const currentTheme = localStorage.getItem("theme") || "dark";
+
+root.setAttribute("data-theme", currentTheme);
   
 window.addEventListener("load", () => {
   generateColors();
@@ -11,59 +11,13 @@ window.addEventListener("load", () => {
 
   root.style.visibility = "visible";
 
-  const searchToggle = document.querySelector("#header-search-toggle");
-  const themeToggle = document.querySelector("#header-theme-toggle");
-
-  if (searchToggle) {
-    searchToggle.addEventListener("click", setSearch);
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const currentTheme = localStorage.getItem("theme");
-      const newTheme = currentTheme === "light" ? "dark" : "light";
-      setTheme(newTheme);
-      brandmarkColors();
-    });
-  }
-});
-
-function setTheme(newTheme) {
-  const styles = getComputedStyle(root);
-  const properties = ["header-background", "nav-background", "nav-button", "main-background", "main-color"];
-
-  properties.forEach(property => {
-    const value = styles.getPropertyValue(`--${newTheme}-${property}`);
-    root.style.setProperty(`--${property}`, value);
+  document.querySelector("#theme-toggle")?.addEventListener("click", () => {
+    const newTheme = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    brandmarkColors();
   });
-  
-  theme = newTheme;
-  localStorage.setItem("theme", newTheme);
-}
-
-function setSearch() {
-  const nav = document.querySelector("nav");
-  const nav_search = document.querySelector("#nav-search");
-  const nav_search_bar = document.querySelector("#nav-search-bar");
-
-  if (!nav.classList.contains("nav-section-hidden") && !nav_search.classList.contains("nav-hidden")) {
-    nav.classList.add("nav-section-hidden");
-    nav_search_bar.value = "";
-  } 
-  else if (!nav.classList.contains("nav-section-hidden") && nav_search.classList.contains("nav-hidden")) {
-    nav.classList.add("nav-section-hidden");
-    setTimeout(() => {
-      nav_search.classList.remove("nav-hidden");
-      nav.classList.remove("nav-section-hidden");
-    }, 600);
-    nav_search_bar.value = "";
-  }
-  else {
-    nav_search_bar.value = "";
-    nav_search.classList.remove("nav-hidden");
-    nav.classList.remove("nav-section-hidden");
-  }
-}
+});
 
 function generateColors() {
   const styles = getComputedStyle(root);
@@ -89,7 +43,7 @@ function generateColors() {
 
 function brandmarkColors() {
   let styles = getComputedStyle(document.documentElement);
-  let brandmarks = document.querySelectorAll(".logo-brandmark");
+  let brandmarks = document.querySelectorAll(".brandmark");
 
   brandmarks.forEach(brandmark => {
     let svg = brandmark.contentDocument;  
