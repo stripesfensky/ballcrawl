@@ -44,7 +44,7 @@ jobs:
           echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
 
       - name: Cache Hugo resources
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ${{ runner.temp }}/.cache/hugo
           key: ${{ runner.os }}-hugo-${{ hashFiles('**/assets/**', '**/static/**', 'hugo.yaml') }}
@@ -76,4 +76,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-        
