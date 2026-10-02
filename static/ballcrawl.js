@@ -4,12 +4,11 @@ const root = document.documentElement;
 const currentTheme = localStorage.getItem("theme") || "dark";
 
 root.setAttribute("data-theme", currentTheme);
+root.style.visibility = "visible";
   
 window.addEventListener("load", () => {
   generateColors();
   brandmarkColors();
-
-  root.style.visibility = "visible";
 
   document.querySelector("#theme-toggle")?.addEventListener("click", () => {
     const newTheme = root.getAttribute("data-theme") === "light" ? "dark" : "light";
