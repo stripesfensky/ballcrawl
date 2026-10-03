@@ -140,21 +140,6 @@ footer {
   background-color: var(--randomB);
 }
 
-@media (hover: hover) {
-  .button {
-    transition: background-color 0.2s;
-  }
-
-  .button:hover {
-    cursor: pointer;
-    background-color: var(--randomB);
-  }
-
-  .button-main:hover {
-    background-color: var(--randomC) !important;
-  }
-}
-
 footer .brandmark {
   padding-bottom: calc(var(--base-font-size) * 0.5);
 }
@@ -187,6 +172,15 @@ footer .brandmark {
 
 #pageinfo-updated {
   font-size: calc(var(--base-font-size) * 0.8);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
+}
+
+#pageinfo-updated.visible {
+  max-height: 1rem;
+  opacity: 1;
 }
 
 #disclaimer {
@@ -210,9 +204,17 @@ footer .brandmark {
 }
 
 @media (hover: hover) {
+  .button {
+    transition: background-color 0.2s;
+  }
+
   .button:hover {
     cursor: pointer;
     background-color: var(--randomB);
+  }
+
+  .button-main:hover {
+    background-color: var(--randomC) !important;
   }
 }
 
