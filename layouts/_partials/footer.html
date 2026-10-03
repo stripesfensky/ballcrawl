@@ -8,8 +8,8 @@
     <ul>
       <li>Site last updated on {{ now.Format "January 2, 2006 at 3:04pm MST" }}</li>
       {{ $privacy := (site.GetPage "privacy.md").RelPermalink }}
+      <li>Made by <a href="https://www.github.com/stripesfensky/ballcrawl">Stripes</a></li>
       <li><a href="{{ $privacy }}">Privacy</a></li>
-      <li><a href="https://www.github.com/stripesfensky/ballcrawl">Source</a></li>
     </ul>
   </div>
   <object class="brandmark" type="image/svg+xml" data="{{ .RelPermalink }}"></object>
