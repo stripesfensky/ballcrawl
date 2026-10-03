@@ -10,14 +10,15 @@ window.addEventListener("DOMContentLoaded", () => {
   generateColors();
   
   const toggleButton = document.querySelector("#theme-toggle");
+  const pageInfoButton = document.querySelector("#pageinfo-toggle");
 
-  updateToggleIcon(currentTheme)
+  updateToggleIcon(currentTheme);
 
   requestAnimationFrame(() => {
     document.body.classList.remove("preload");
   });
 
-  toggleButton?.addEventListener("click", () => {
+  toggleButton.addEventListener("click", () => {
     const activeTheme = root.getAttribute("data-theme");
     const newTheme = activeTheme === "light" ? "dark" : "light";
 
@@ -26,6 +27,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     updateToggleIcon(newTheme);
     brandmarkColors();
+  });
+
+  pageInfoButton.addEventListener("click", () => {
+    const pageInfoUpdated = document.querySelector("#pageinfo-updated");
+    pageInfoUpdated.classList.toggle("visible");
   });
 
   document.querySelectorAll(".brandmark").forEach(brandmark => {
