@@ -112,6 +112,7 @@ footer {
 .brandmark {
   height: calc(var(--base-font-size) * 3.2);
   max-height: calc(var(--base-font-size) * 3.2);
+  pointer-events: none;
   width: calc(var(--base-font-size) * 3.2);
 }
 
