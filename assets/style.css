@@ -176,7 +176,6 @@ footer .brandmark {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease, opacity 0.2s ease;
 }
 
 #pageinfo-updated.visible {
@@ -205,10 +204,6 @@ footer .brandmark {
 }
 
 @media (hover: hover) {
-  .button {
-    transition: background-color 0.2s;
-  }
-
   .button:hover {
     cursor: pointer;
     background-color: var(--randomB);
