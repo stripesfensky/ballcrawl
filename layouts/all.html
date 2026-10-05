@@ -7,4 +7,9 @@
   </div>
   <div id="pageinfo-updated">Page last updated on {{ .Lastmod.Format "January 2, 2006 at 3:04pm MST" }}</div>
   <p>{{ $.Content }}</p>
+  <ul>
+    {{ range .Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>  
 {{ end }}
