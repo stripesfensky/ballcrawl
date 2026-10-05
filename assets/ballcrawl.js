@@ -36,10 +36,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".brandmark").forEach(brandmark => {
     brandmark.addEventListener("load", brandmarkColors);
+
     if (brandmark.contentDocument) {
       brandmarkColors();
     }
-  })
+  });
 });
 
 function updateToggleIcon(theme) {
@@ -99,5 +100,4 @@ function brandmarkColors() {
       }
     });
   });
-
 }
