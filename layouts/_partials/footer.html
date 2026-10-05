@@ -7,7 +7,7 @@
     </p>
     <ul>
       <li>Site last updated on {{ now.Format "January 2, 2006 at 3:04pm MST" }}</li>
-      {{ $privacy := (site.GetPage "privacy.md").RelPermalink }}
+      {{ $privacy := (site.GetPage "privacy").RelPermalink }}
       <li>Made by <a href="https://www.github.com/stripesfensky/ballcrawl">Stripes</a></li>
       <li><a href="{{ $privacy }}">Privacy</a></li>
     </ul>
