@@ -2,7 +2,10 @@
 
 backend:
   name: github
-  repo: user/repo
+  repo: stripesfensky/ballcrawl
+  base_url: https://www.ballcrawl.org
+
+publish_mode: editorial_workflow
 
 media_folder: /public/media
 public_folder: /media
