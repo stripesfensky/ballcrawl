@@ -7,9 +7,11 @@
     </p>
     <ul>
       <li>Site last updated on {{ now.Format "January 2, 2006 at 3:04pm MST" }}</li>
-      {{ $privacy := (site.GetPage "privacy").RelPermalink }}
       <li>Made by <a href="https://www.github.com/stripesfensky/ballcrawl">Stripes</a></li>
+      {{ $privacy := (site.GetPage "privacy").RelPermalink }}
+      {{ $terms := (site.GetPage "terms").RelPermalink }}
       <li><a href="{{ $privacy }}">Privacy</a></li>
+      <li><a href="{{ $terms }}">Terms</a></li>
     </ul>
   </div>
   <a href="{{ site.Home.RelPermalink }}" title="Return to homepage" aria-label="Return to homepage"><object class="brandmark" type="image/svg+xml" data="{{ .RelPermalink }}"></object></a>
