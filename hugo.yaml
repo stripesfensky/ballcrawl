@@ -6,4 +6,4 @@ timeZone: "America/New_York"
 enableGitInfo: true
 
 frontmatter:
-  lastmod: [':fileModTime', ':default']
+  lastmod: [':git']
