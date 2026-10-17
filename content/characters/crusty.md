@@ -1,4 +1,5 @@
 ---
 title: Crusty
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
