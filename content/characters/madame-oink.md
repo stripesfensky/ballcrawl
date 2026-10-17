@@ -1,4 +1,5 @@
 ---
 title: Madame Oink
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
