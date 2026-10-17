@@ -1,4 +1,5 @@
 ---
 title: The Mopsey Sisters
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
