@@ -1,5 +1,5 @@
 ---
-title: Studio C Beta Protoype (Small Town)
+title: Studio C Beta Prototype (Small Town)
 brands:
 - Chuck E. Cheese's
 animatronics:
