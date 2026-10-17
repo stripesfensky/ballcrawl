@@ -1,4 +1,5 @@
 ---
 title: Harmony Howlette
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
