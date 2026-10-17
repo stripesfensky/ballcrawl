@@ -4,4 +4,7 @@ brands:
 - Chuck E. Cheese's
 animatronics:
 - Chuck E. Cheese (Concept Unification)
+debut_date:
+  year: 2010
+  month: 9
 ---
