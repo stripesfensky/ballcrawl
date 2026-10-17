@@ -1,4 +1,5 @@
 ---
 title: The Warblettes
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
