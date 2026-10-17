@@ -1,4 +1,5 @@
 ---
 title: Foxy Colleen
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
