@@ -4,4 +4,8 @@ brands:
 - Chuck E. Cheese's
 animatronics:
 - Chuck E. Cheese (Cyberamic)
+debut_date:
+  year: 1987
+  month: 2
+  day: 1
 ---
