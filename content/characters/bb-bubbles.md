@@ -1,4 +1,5 @@
 ---
 title: B.B. Bubbles
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
