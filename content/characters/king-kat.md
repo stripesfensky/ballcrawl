@@ -1,4 +1,5 @@
 ---
 title: King Kat
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
