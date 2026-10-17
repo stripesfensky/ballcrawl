@@ -1,4 +1,5 @@
 ---
 title: Sally Sashay
-brands: [Pizza Time Theatre]
+brands: 
+- Pizza Time Theatre
 ---
